@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-red-700"><BaseNavigation /> <slot /></div>
+  <div class="bg-zinc-800"><BaseNavigation /> <slot /></div>
 </template>
 
 <script setup lang="ts"></script>

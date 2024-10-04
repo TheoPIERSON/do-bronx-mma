@@ -13,6 +13,7 @@ export default {
     },
     fontFamily: {
       Montserrat: "Montserrat, sans-serif",
+      Roboto: "Roboto, sans-serif",
     },
     container: {
       center: true,
