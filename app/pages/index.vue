@@ -1,7 +1,7 @@
 <template>
-  <main>
+  <main class="text-white">
     <Hero />
-    <h1>Hello</h1>
+    <CoachPresentation />
   </main>
 </template>
 
