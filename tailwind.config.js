@@ -20,5 +20,14 @@ export default {
       padding: "2rem",
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".mask-gradient": {
+          "mask-image": "linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%)",
+          "-webkit-mask-image": "linear-gradient(to bottom, rgba(0, 0, 0, 1) 66%, rgba(0, 0, 0, 0) 100%)",
+        },
+      });
+    },
+  ],
 };
