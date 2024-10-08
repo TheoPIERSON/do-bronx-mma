@@ -2,6 +2,7 @@
   <main class="text-white">
     <Hero />
     <CoachPresentation />
+    <ClubPresentation />
   </main>
 </template>
 
