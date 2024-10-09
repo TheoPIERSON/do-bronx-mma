@@ -4,7 +4,7 @@
       Découvrez un club <span class="bg-red-700 px-2 pb-1">décoré</span>
     </h1>
     <div class="grid place-items-center">
-      <p class="p-4 text-center md:text-start">
+      <p class="p-4 text-center md:text-start text-2xl">
         Nos athlètes gagnent chaque années plusieurs titres que ce soit en amateurs ou en professionnel.
       </p>
       <div class="overflow-hidden w-5/6 md:w-4/6">
@@ -19,10 +19,11 @@
           </div>
         </div>
       </div>
-      <div>
-        <h3>Cliquez</h3>
-        <button>ICI</button>
-        <h4>pour voir tout nos compétiteurs</h4>
+      <div class="grid place-items-center">
+        <h3 class="text-center text-2xl m-2">Cliquez</h3>
+        <button class="w-1/2 mb-4 p-1 rounded-full bg-red-700 font-bold text-xl hover:bg-red-950">ICI</button>
+        <p class="text-center text-2xl">ou sur les images</p>
+        <p class="text-center text-2xl">pour voir tous nos compétiteurs.</p>
       </div>
     </div>
   </div>
@@ -38,7 +39,7 @@ const images = ref(["images/compet-1.jpg", "images/compet-2.jpg", "images/boxer_
 const currentIndex = ref(0);
 
 // Nombre d'images visibles selon la taille de l'écran
-const imagesToShow = ref(window.innerWidth >= 768 ? 2 : 1);
+const imagesToShow = ref(1); // Par défaut, une seule image visible
 
 let intervalId: any;
 
@@ -47,20 +48,23 @@ const nextSlide = () => {
   currentIndex.value = (currentIndex.value + 1) % images.value.length;
 };
 
-// Démarrer l'auto défilement
-onMounted(() => {
-  intervalId = setInterval(nextSlide, 3000); // Changer d'image toutes les 3 secondes
-  window.addEventListener("resize", handleResize);
-});
-
-// Gérer le changement de taille d'écran
-const handleResize = () => {
-  imagesToShow.value = window.innerWidth >= 768 ? 2 : 1;
+// Vérifier si le code est exécuté côté client avant d'accéder à `window`
+const updateImagesToShow = () => {
+  if (typeof window !== "undefined") {
+    imagesToShow.value = window.innerWidth >= 768 ? 2 : 1;
+  }
 };
+
+// Démarrer l'auto défilement et gérer la taille de l'écran
+onMounted(() => {
+  updateImagesToShow();
+  intervalId = setInterval(nextSlide, 3000); // Changer d'image toutes les 3 secondes
+  window.addEventListener("resize", updateImagesToShow);
+});
 
 // Arrêter l'auto défilement lors de la destruction du composant
 onUnmounted(() => {
   clearInterval(intervalId);
-  window.removeEventListener("resize", handleResize);
+  window.removeEventListener("resize", updateImagesToShow);
 });
 </script>

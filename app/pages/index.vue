@@ -3,6 +3,7 @@
     <Hero />
     <CoachPresentation />
     <ClubPresentation />
+    <FamilyClub />
   </main>
 </template>
 
