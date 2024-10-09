@@ -4,6 +4,7 @@
     <CoachPresentation />
     <ClubPresentation />
     <FamilyClub />
+    <Contact />
   </main>
 </template>
 
