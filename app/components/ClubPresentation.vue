@@ -7,7 +7,7 @@
       <p class="p-4 text-center md:text-start text-2xl">
         Nos athlètes gagnent chaque années plusieurs titres que ce soit en amateurs ou en professionnel.
       </p>
-      <div class="overflow-hidden w-5/6 md:w-4/6">
+      <NuxtLink to="athletes" class="overflow-hidden w-5/6 md:w-4/6">
         <!-- Container du carousel -->
         <div
           class="flex transition-transform duration-500 ease-in-out"
@@ -18,10 +18,14 @@
             <NuxtImg :src="image" class="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
-      </div>
+      </NuxtLink>
       <div class="grid place-items-center">
         <h3 class="text-center text-2xl m-2">Cliquez</h3>
-        <button class="w-1/2 mb-4 p-1 rounded-full bg-red-700 font-bold text-xl hover:bg-red-950">ICI</button>
+        <NuxtLink
+          to="/athletes"
+          class="text-center w-1/2 mb-4 p-1 rounded-full bg-red-700 font-bold text-xl hover:bg-red-950"
+          >ICI</NuxtLink
+        >
         <p class="text-center text-2xl">ou sur les images</p>
         <p class="text-center text-2xl">pour voir tous nos compétiteurs.</p>
       </div>

@@ -9,9 +9,12 @@
         importe leur âge, sexe, taille, ethni ou religion. <br /><br />C’est pour cela que nous adaptons les
         entraînement à chaque personne, que vous soyez compétiteur ou passioné.
       </p>
-      <button class="w-1/2 mb-4 p-1 rounded-full bg-red-700 font-bold text-xl hover:bg-red-950">
-        Faites un essai !
-      </button>
+      <NuxtLink
+        to="/about"
+        class="text-center w-1/2 mb-4 p-1 rounded-full bg-red-700 font-bold text-xl hover:bg-red-950"
+      >
+        Infos sur le club
+      </NuxtLink>
     </div>
     <NuxtImg class="p-4" src="/images/boxer_child.jpg" width="700px" />
   </div>

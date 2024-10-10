@@ -14,11 +14,21 @@
         Muay Thai - Kickboxing - MMA
       </h2>
       <p class="text-5xl font-bold md:mt-7">Prêt à vous dépasser ?</p>
-      <button class="text-2xl font-bold mt-3 bg-red-700 py-2 px-3 rounded-full hover:bg-red-950">
+      <button
+        @click="scrollToContact"
+        class="text-2xl font-bold mt-3 bg-red-700 py-2 px-3 rounded-full hover:bg-red-950"
+      >
         Rejoignez-nous !
       </button>
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const scrollToContact = () => {
+  const section = document.getElementById("contact");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+</script>
