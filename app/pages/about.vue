@@ -1,5 +1,6 @@
 <template>
   <ClubInfos />
+  <ClubHours />
   <Contact />
 </template>
 

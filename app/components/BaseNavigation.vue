@@ -28,10 +28,12 @@
         <li><NuxtLink @click="toggleNav" to="/" class="hover:bg-red-700 focus:bg-red-700 p-3">Accueil</NuxtLink></li>
         <li><NuxtLink @click="toggleNav" to="/about" class="hover:bg-red-700 focus:bg-red-700 p-3">Infos</NuxtLink></li>
         <li>
-          <NuxtLink @click="toggleNav" to="/about" class="hover:bg-red-700 focus:bg-red-700 p-3">Athlètes</NuxtLink>
+          <NuxtLink @click="toggleNav" to="/athletes" class="hover:bg-red-700 focus:bg-red-700 p-3">Athlètes</NuxtLink>
         </li>
         <li>
-          <NuxtLink @click="toggleNav" to="/about" class="hover:bg-red-700 focus:bg-red-700 p-3">Compétitions</NuxtLink>
+          <NuxtLink @click="toggleNav" to="/palmares" class="hover:bg-red-700 focus:bg-red-700 p-3"
+            >Compétitions</NuxtLink
+          >
         </li>
       </ul>
     </nav>
