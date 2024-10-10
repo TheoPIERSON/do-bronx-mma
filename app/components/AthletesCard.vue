@@ -2,7 +2,13 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     <!-- Boucle sur les combattants -->
     <div v-for="fighter in fighters" :key="fighter.name" class="grid place-items-center p-4 rounded-md">
-      <NuxtImg class="p-2" :src="fighter.image" width="250px" height="400px" alt="Image du combattant" />
+      <NuxtImg
+        class="p-2 object-cover w-[250px] h-[400px]"
+        :src="fighter.image"
+        width="250px"
+        height="400px"
+        alt="Image du combattant"
+      />
       <h2>{{ fighter.name }} - {{ fighter.age }} ans</h2>
       <h3>{{ fighter.record }}</h3>
     </div>
