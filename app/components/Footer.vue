@@ -29,10 +29,10 @@
   <div class="bg-white text-black grid place-items-center text-sm">
     <p>
       Do Bronx MMA - Site web développé par
-      <a href="https://theo-pierson.vercel.app/">Theo Pierson - Developpeur Web</a>
+      <a href="https://theopierson.fr">Theo Pierson - Developpeur Web</a>
     </p>
     <p class="font-bold">Mentions légales - Politique de confidentialité</p>
-    <a href="https://theo-pierson.vercel.app/" class="underline">theopierson.fr</a>
+    <a href="https://theopierson.fr" class="underline">theopierson.fr</a>
   </div>
 </template>
 
